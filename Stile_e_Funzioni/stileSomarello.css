@@ -1,0 +1,51 @@
+.pad{
+  border: 1px solid black;
+  height: 200px;
+  width: 200px;
+}
+
+.tab{
+  padding: 10px;
+  cursor: grab;
+  align-items: left;
+}
+
+#back{
+  position: relative;
+}
+
+.place{
+  position: absolute;
+  text-align: center;
+  border: 3px dashed black;
+  color: black;
+  border-color: lightblue;
+}
+
+#cpu_place{
+  top: 75px;
+  left: 480px;
+  height: 115px;
+  width: 115px;
+}
+
+#gpu_place{
+  top: 300px;
+  left: 450px;
+  height: 150px;
+  width: 150px;
+}
+
+#ram_place{
+  top: 20px;
+  left: 630px;
+  height: 300px;
+  width: 150px;
+}
+
+#cpuCooler_place{
+  top: 15px;
+  left: 470px;
+  height: 100px;
+  width: 140px;
+}

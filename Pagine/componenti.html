@@ -1,0 +1,45 @@
+<html>
+<head>
+  <title>Motherboard</title>
+  <link rel="stylesheet" href="../Stile_e_Funzioni/stileSomarello.css">
+  <link rel="stylesheet" href="../Stile_e_Funzioni/stilePagine.css">
+</head>
+
+<script type="text/javascript" src="../Stile_e_Funzioni/jsSomarello1.js"></script>
+
+<body>
+	<h1>Somarello Escape</h1>
+	<h2>Rompicapo della scheda madre</h2>
+  <p>
+      Installa correttamente il pc per passare alla pagina successiva: 
+  </p>
+
+<table width="100%">
+<tr>
+<td width="15%">
+<div>
+  <img id="cpu"       class="tab" draggable="true" ondragstart="drag(event)" src="../Immagini/cpu.png">
+  <img id="gpu"       class="tab" draggable="true" ondragstart="drag(event)" src="../Immagini/gpu.png">
+  <img id="ram"       class="tab" draggable="true" ondragstart="drag(event)" src="../Immagini/ram.png">
+  <img id="cpuCooler" class="tab" draggable="true" ondragstart="drag(event)" src="../Immagini/cpuCooler.png">
+</div>
+</td>
+<td width="85%">
+<div id="back"><img src="../Immagini/motherboard.png">
+  <div id="cpu_place"       class="place" ondrop="drop(event), clear(cpu_place)" ondragover="allowDrop(event)">Droppami</div>
+  <div id="gpu_place"       class="place" ondrop="drop(event), clear(gpu_place)" ondragover="allowDrop(event)">Droppami</div>
+  <div id="ram_place"       class="place" ondrop="drop(event), clear(ram_place)" ondragover="allowDrop(event)">Droppami</div>
+  <div id="cpuCooler_place" class="place" ondrop="drop(event), clear(cpuCooler_place)" ondragover="allowDrop(event)">Droppami</div>
+</div>
+</td>
+</tr>
+</table>
+
+  <button onclick="location.reload()">Ripristina</button>
+  <button onclick="controllaVittoria()">Controlla</button>
+  <div id="prossimaPagina"></div>
+
+
+</body>
+
+</html>

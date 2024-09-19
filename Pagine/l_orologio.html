@@ -1,0 +1,48 @@
+<html>
+<head>
+	<title>L'orologio</title>
+	<link rel="stylesheet" href="../Stile_e_Funzioni/StilePagine.css">
+</head>
+
+<script>
+	function avvia() {
+      mostraOra();
+      setInterval(mostraOra, 1000);
+    }
+
+    function mostraOra() {
+      var d = new Date();
+      var ora = d.toLocaleTimeString();
+	  document.getElementById("ora").style.color="black";
+      document.getElementById("ora").innerText= ora;
+    }
+
+	function controlloRispostaOra(){
+		const d = new Date();
+		var hour = d.getHours();
+		var oraInserita=document.getElementById("testoDaControllare").value;
+
+		if(hour==oraInserita){
+			alert("Complimenti!\nSomarello deve proprio amare il suo orologio...");
+			location.href="iphtml1.html";
+		}
+		else{
+			alert("Prova a inserire qualche altra risposta...\nmagari un indizio è nascosto nel testo!")
+		}
+	}
+</script>
+
+<body onload="avvia()">
+	<h1>Somarello Escape</h1>
+	<h2>L'orologio </h2>
+	<p id="ora"></p>
+	<p>
+		Complimenti! Somarello aveva offuscato la pagina per evitare di farci uscire...<br>
+		l'unica cosa che ha lasciato alle spalle è un orologio. A Somarello piace tenersi informato sul passare delle <b>'ORE'</b>.<br>
+
+	</p>
+	<br>
+	<input type="text" name="Ora inserita" size="2" maxlength="2" id="testoDaControllare">
+	<button onclick="controlloRispostaOra()">Controlla</button>
+</body>
+</html>

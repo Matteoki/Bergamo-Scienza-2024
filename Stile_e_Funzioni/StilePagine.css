@@ -1,0 +1,48 @@
+p {
+  text-align: center;
+  color: white; 
+  font-size: 32; 
+  background-color: black; 
+  line-height: 1.5; 
+  letter-spacing: 3px;}
+
+h1,h3{
+  text-align: center;
+  color: white; 
+  font-size: 40; 
+  background-color: black;
+  letter-spacing: 3px;}
+
+h2{
+  text-align: center;
+  color: white; 
+  font-size: 24; 
+  background-color: black; 
+  letter-spacing: 3px;}
+
+input {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 15%;
+}
+
+button {
+  display: block;
+  font-size:large;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100px;
+  text-align: center;
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body{
+  background-image: url("../Immagini/background.png");
+  background-size: auto;
+}

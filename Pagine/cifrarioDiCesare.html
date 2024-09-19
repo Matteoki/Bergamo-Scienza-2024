@@ -1,0 +1,38 @@
+<html>
+<head>
+	<title>Cifrario di Somarello</title>
+	<link rel="stylesheet" href="../Stile_e_Funzioni/StilePagine.css">
+</head>
+
+<script>
+	function controllaRisposta() {
+		var fraseCifrata=document.getElementById("testoDaControllare").value;
+
+		fraseCifrata=fraseCifrata.toLowerCase();
+
+		switch(fraseCifrata) {
+			case "somaretto":
+				alert("Complimenti!\nHai cifrato il testo nella maniera corretta!");
+				location.href="l_orologio.html";
+				break;
+			default:
+				alert("Attenzione!\nRiprova a inserire la frase, magari hai sbagliato qualcosa!");
+				break;
+		}
+	}
+</script>
+
+<body>
+	<h1>Somarello Escape</h1>
+	<h2>Cifrario di Somarello</h2>
+	<p>
+		Somarello è un grande appassionato di cifratura ma, essendo stupido, per criptare i suoi messaggi ha usato un cifrario famosissimo... quello di Giulio Cesare.<br>
+		Cesare al suo tempo inventò un cifrario per rendere incomprensibili i suoi messaggi militari... prova ad utilizzarlo anche tu!<br>
+	</p>
+	<p><b> Prova a decifrare questo messaggio: VRPDUHZZR</b></p>
+	<img src="../Immagini/Cesare.png" width="600">
+	<br>
+	<input type="text" name="Frase decifrata" size="50" id="testoDaControllare">
+	<button onclick="controllaRisposta()">Controlla</button><!--Frase da decifrare nel balloon di Somarello :"SONO SOMARELLO(In grassetto per renderlo chiaro) non riuscirete a cifrare il messaggio... neppure al contrario!"-->
+</body>
+</html>

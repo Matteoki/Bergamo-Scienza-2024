@@ -1,0 +1,62 @@
+<html>
+<head>
+	<title>Trova il codice</title>
+	<link rel="stylesheet" href="../Stile_e_Funzioni/StilePagine.css">
+</head>
+		
+<script>
+	function AcqCod() {
+		var StringaCodice = document.getElementById("casella").value;
+	}
+
+	function ControllaCodice(){
+		if (document.getElementById("casella").value == "o") {
+			AlertV();
+		}
+		else{
+			AlertF();
+		}
+	}
+
+	function AlertV(){
+		alert("CODICE CORRETTO :) \n \n ACCESSO ALLA PAGINA SUCCESSIVA!");
+		location.href = "cifrarioDiCesare.html";
+
+	}
+
+	function AlertF(){
+		alert("CODICE ERRATO! \n \n RIPROVA! :(");
+	}
+
+</script>
+
+<body>
+	<br>
+	<br>
+	<h1>Somarello Escape</h1>
+	<h2>Trova il codice - 2 !!!</h2>
+	<br>
+	<br>
+	<p>
+		AAahh, sei riuscito ad uscire di nuovooo, vediamo se riesci ora ahah !!!<br>
+		Somarello si connette sempre ad un computer e utilizza un codice segreto,<br>
+		il codice segreto è scritto su un foglio di carta che è stato strappato da un bidello,<br>
+		per trovare l'indirizzo dovrai mettere insieme tutti i pezzi e risolvere l'indovinello...<br>
+	</p>
+	<p>
+		Mi trovi alla fine dell'arcobaleno, <br>
+		Mi trovi in mezzo all'atomo, <br>
+		Mi trovi all'inizio dell'oceano. <br>
+
+		Che cosa sono???
+	</p>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<input type="text" id="casella">
+	<button onclick="ControllaCodice()">Controlla</button>
+</body>
+</html>

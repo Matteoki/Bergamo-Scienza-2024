@@ -1,0 +1,33 @@
+<html>
+<head>
+	<title>Linguaggi</title>
+	<link rel="stylesheet" href="../Stile_e_Funzioni/stilePagine.css">
+</head>
+<script type="text/javascript">
+	function controlla(){
+		var rispostaCorretta= 28;
+		var rispostaData=document.getElementById("risposta").value;
+
+		if (rispostaCorretta==rispostaData){
+			alert("Complimenti! Sei riuscito a leggere un file di un linguaggio di programmazione!");
+			location.href="ispeziona.html";
+		}
+		else
+			alert("La risposta è sbagliata, riprova!");
+}
+</script>
+<body>
+	<h1>Somarello Escape</h1>
+	<h2>Il Codice di Somarello</h2>
+	<p>
+		Somarello, dato che non eccelle in matematica, ha deciso di scrivere un programma... ma non sa quale sia il risultato finale! 
+		In verita' questo codice, con le giuste basi, puo' essere compreso tranquillamente... quale sara' il risultato finale di a?
+	</p>
+
+	<img src="../Immagini/c++.png" style="width:600px; height:400px">
+
+	<br>	
+	<input type="text" name="answer" id="risposta" size=25>
+	<button onclick="controlla()">Controlla</button>	
+</body>
+</html> 

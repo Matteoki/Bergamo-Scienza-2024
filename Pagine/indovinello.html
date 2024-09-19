@@ -1,0 +1,35 @@
+<html>
+<head>
+    <title>L'indovinello di Somarello</title>
+    <link rel="stylesheet" href="../Stile_e_Funzioni/StilePagine.css">
+</head>
+
+<script>
+        function controllo(){
+            var RispostaGiusta=221;
+            var RispostaData=document.getElementById("casella").value;
+
+            if (RispostaData==RispostaGiusta){
+                alert("Complimenti!\nDi sicuro Somarello ci avrebbe messo almeno il doppio del tuo tempo!");
+                location.href="Testo_1_ERG.html";
+            }
+                
+            else
+                alert("Risposta sbagliata, riprova! Prova a ragionarci meglio!");
+        }
+</script>
+
+<body>
+    <h1>Somarello Escape</h1>
+    <h2>L'indovinello di Somarello</h2>
+    <p>
+        A Somarello piacciono molto gli indovinelli, prova a risorverne uno anche tu!<br>
+        La somma dell’età di 5 uomini è 121.<br>
+        Tra 20 anni quale sarà la somma della loro età?<br>
+    </p>
+	<br>
+    <input id="casella" type="text" name="username" required />
+    <button onclick="controllo()">Controlla</button>
+
+</body>
+</html>
