@@ -5,8 +5,35 @@
 </head>
 
 <script>
-	function paginaSuccessiva(){
-		location.href="Pagine/indovinello.html";
+	var passw = " ";
+	var scuole = " ";
+	var linkPagina = " ";
+
+	function paginaSuccessiva(var linkPagina){ //la pagina variera' a seconda delle scuole(medie o superiori)
+		location.href=linkPagina;
+	}
+
+	function leggiPassword() {
+		passw = document.getElementById("passw"); 	//serve un elemento html che raccolga la password in una stringa di testo, perché in base alla password gli utenti saranno reindirizzati nei quesiti corrispondenti al loro livello
+		scuole = passw[0];
+
+		switch(scuole) {
+			case "S":
+				linkPagina = "Pagine/superiori_1.html";
+				break;
+
+			case "M":
+				linkPagina = "Pagine/medie_1.com";
+				break;
+
+			default:
+			//	console.log("crippa aiutaci");
+				document.getElementById("messaggio").innerHTML = "Password sbagliata! <br />Riprova!";
+				document.getElementById("passw").innerHTML = " ";
+				break;
+		}
+
+		paginaSuccessiva(linkPagina);
 	}
 </script>
 
@@ -16,7 +43,7 @@
 	<p>
 		Ciao a tutti ragazzi, io sono Somarello ed ora siete sotto le mie grinfie e non ve ne andrete più! <br>
 		Non potrete mai iscrivervi a questa scuola se non supererete il mio rompicapo!<br>
-		Vi presento... IL SOMARELLO ESCAPE!<br> 
+		Vi presento... IL SOMARELLO ESCAPE!<br>
 		L'unico modo per iscrivervi all'ikaros ogni singolo livello e sbloccare la porta del laboratorio per uscire!<br>
 	</p>
 	<br>
