@@ -1,3 +1,4 @@
+<!doctype html>
 <html>
 <head>
 	<title>Somarello Escape</title>
@@ -5,17 +6,14 @@
 </head>
 
 <script>
-	var passw = " ";
-	var scuole = " ";
-	var linkPagina = " ";
-
-	function paginaSuccessiva(var linkPagina){ //la pagina variera' a seconda delle scuole(medie o superiori)
-		location.href=linkPagina;
+	function paginaSuccessiva(linkPagina){ //la pagina variera' a seconda delle scuole(medie o superiori)
+		location.href = linkPagina;
 	}
 
-	function leggiPassword() {
-		passw = document.getElementById("passw"); 	//serve un elemento html che raccolga la password in una stringa di testo, perché in base alla password gli utenti saranno reindirizzati nei quesiti corrispondenti al loro livello
-		scuole = passw[0];
+	function readPassword() {
+		//serve un elemento html che raccolga la password in una stringa di testo, perché in base alla password gli utenti saranno reindirizzati nei quesiti corrispondenti al loro livello
+		var scuole =  document.getElementById("passw").value[0];
+		var linkPagina = " ";
 
 		switch(scuole) {
 			case "S":
@@ -27,13 +25,13 @@
 				break;
 
 			default:
-			//	console.log("crippa aiutaci");
 				document.getElementById("messaggio").innerHTML = "Password sbagliata! <br />Riprova!";
-				document.getElementById("passw").innerHTML = " ";
+				document.getElementById("passw").value = "";
 				break;
 		}
 
-		paginaSuccessiva(linkPagina);
+		if(linkPagina != " ")
+			paginaSuccessiva(linkPagina);
 	}
 </script>
 
@@ -47,8 +45,10 @@
 		L'unico modo per iscrivervi all'ikaros ogni singolo livello e sbloccare la porta del laboratorio per uscire!<br>
 	</p>
 	<br>
-	<h2>Clicca per iniziare la tua avventura!</h2>
-	<button onclick="paginaSuccessiva()">Inizia!</button>
+
+	<h2 id="messaggio">Inserisci la password per iniziare la sfida!</h2>
+	<input id="passw"/>
+	<button onclick="readPassword()">Inizia!</button>
 
 </body>
 </html>
