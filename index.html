@@ -13,15 +13,15 @@
 
 	function readPassword() {
 		//serve un elemento html che raccolga la password in una stringa di testo, perché in base alla password gli utenti saranno reindirizzati nei quesiti corrispondenti al loro livello
-		var scuole =  document.getElementById("passw").value[0];
+		var scuole =  document.getElementById("passw").value[0].toLowerCase();
 		var linkPagina = " ";
 
 		switch(scuole) {
-			case "S":
+			case "s":
 				linkPagina = "Pagine/superiori_1.html";
 				break;
 
-			case "M":
+			case "m":
 				linkPagina = "Pagine/medie_1.com";
 				break;
 
