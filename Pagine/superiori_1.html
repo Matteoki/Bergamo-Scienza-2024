@@ -6,11 +6,22 @@
 		<link rel="stylesheet" href="../Stile_e_Funzioni/StilePagine.css">
     <script type="text/javascript">
       function controllaRisposta() {
+        var risposta = document.getElementById("risposta").value;
+        switch(risposta) {
+          case "1/7":
+            alert("Risposta giusta!");
+            location.href = "superiori_2.html";
+            break;
 
+          default:
+            alert("Risposta sbagliata!");
+            document.getElementById("risposta").value = "";
+            break;
+        }
       }
     </script>
   </head>
-  
+
   <body>
     <h1>Escape room: il Mistero di Marconi</h1>
     <h2>Equazione</h2>
