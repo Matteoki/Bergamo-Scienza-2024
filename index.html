@@ -1,55 +1,55 @@
 <!doctype html>
 <html>
-<head>
-	<title>Somarello Escape</title>
-	<meta charset="utf-8"/>
-	<link rel="stylesheet" href="Stile_e_Funzioni/StilePagine.css">
-</head>
+	<head>
+		<title>Somarello Escape</title>
+		<meta charset="utf-8"/>
+		<link rel="stylesheet" href="Stile_e_Funzioni/StilePagine.css">
 
-<script>
-	function paginaSuccessiva(linkPagina){ //la pagina variera' a seconda delle scuole(medie o superiori)
-		location.href = linkPagina;
-	}
+		<script type="text/javascript">
+			function paginaSuccessiva(linkPagina){ //la pagina variera' a seconda delle scuole(medie o superiori)
+				location.href = linkPagina;
+			}
 
-	function readPassword() {
-		//serve un elemento html che raccolga la password in una stringa di testo, perché in base alla password gli utenti saranno reindirizzati nei quesiti corrispondenti al loro livello
-		var scuole =  document.getElementById("passw").value[0].toLowerCase();
-		var linkPagina = " ";
+			function readPassword() {
+				//serve un elemento html che raccolga la password in una stringa di testo, perché in base alla password gli utenti saranno reindirizzati nei quesiti corrispondenti al loro livello
+				var scuole =  document.getElementById("passw").value[0].toLowerCase();
+				var linkPagina = " ";
 
-		switch(scuole) {
-			case "s":
-				linkPagina = "Pagine/superiori_1.html";
-				break;
+				switch(scuole) {
+					case "s":
+						linkPagina = "Pagine/superiori_1.html";
+						break;
 
-			case "m":
-				linkPagina = "Pagine/medie_1.com";
-				break;
+					case "m":
+						linkPagina = "Pagine/medie_1.com";
+						break;
 
-			default:
-				document.getElementById("messaggio").innerHTML = "Password sbagliata! <br />Riprova!";
-				document.getElementById("passw").value = "";
-				break;
-		}
+					default:
+						document.getElementById("messaggio").innerHTML = "Password sbagliata! <br />Riprova!";
+						document.getElementById("passw").value = "";
+						break;
+				}
 
-		if(linkPagina != " ")
-			paginaSuccessiva(linkPagina);
-	}
-</script>
+				if(linkPagina != " ")
+					paginaSuccessiva(linkPagina);
+			}
+		</script>
+	</head>
 
-<body>
-	<h1>Somarello Escape</h1>
-	<h2>Storia di Somarello</h2>
-	<p>
-		Ciao a tutti ragazzi, io sono Somarello ed ora siete sotto le mie grinfie e non ve ne andrete più! <br>
-		Non potrete mai iscrivervi a questa scuola se non supererete il mio rompicapo!<br>
-		Vi presento... IL SOMARELLO ESCAPE!<br>
-		L'unico modo per iscrivervi all'ikaros ogni singolo livello e sbloccare la porta del laboratorio per uscire!<br>
-	</p>
-	<br>
+	<body>
+		<h1>Escape room: il Mistero di Marconi</h1>
+		<h2>Storia di Somarello</h2>
+		<p>
+			Ciao a tutti ragazzi, io sono Somarello ed ora siete sotto le mie grinfie e non ve ne andrete più! <br>
+			Non potrete mai iscrivervi a questa scuola se non supererete il mio rompicapo!<br>
+			Vi presento... IL SOMARELLO ESCAPE!<br>
+			L'unico modo per iscrivervi all'ikaros ogni singolo livello e sbloccare la porta del laboratorio per uscire!<br>
+		</p>
+		<br>
 
-	<h2 id="messaggio">Inserisci la password per iniziare la sfida!</h2>
-	<input id="passw"/>
-	<button onclick="readPassword()">Inizia!</button>
+		<h2 id="messaggio">Inserisci la password per iniziare la sfida!</h2>
+		<input id="passw"/>
+		<button onclick="readPassword()">Inizia!</button>
 
-</body>
+	</body>
 </html>
