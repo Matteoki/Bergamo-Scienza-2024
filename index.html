@@ -1,19 +1,18 @@
 <!doctype html>
 <html>
 	<head>
-		<title>Somarello Escape</title>
+		<title>Escape room: il Mistero di Marconi</title>
 		<meta charset="utf-8"/>
 		<link rel="stylesheet" href="Stile_e_Funzioni/StilePagine.css">
-
+		<script src="Stile_e_Funzioni/jquery-3.7.1.min.js" type="text/javascript"></script>
 		<script type="text/javascript">
 			function paginaSuccessiva(linkPagina){ //la pagina variera' a seconda delle scuole(medie o superiori)
 				location.href = linkPagina;
 			}
 
 			function readPassword() {
-				//serve un elemento html che raccolga la password in una stringa di testo, perché in base alla password gli utenti saranno reindirizzati nei quesiti corrispondenti al loro livello
-				var scuole =  document.getElementById("passw").value[0].toLowerCase();
-				var linkPagina = " ";
+				var scuole =  $("#passw").val().charAt(0).toLowerCase();
+				var linkPagina = "";
 
 				switch(scuole) {
 					case "s":
@@ -25,8 +24,8 @@
 						break;
 
 					default:
-						document.getElementById("messaggio").innerHTML = "Password sbagliata! <br />Riprova!";
-						document.getElementById("passw").value = "";
+						$("messaggio").html("Password sbagliata! <br />Riprova!");
+						$("passw").val("");
 						break;
 				}
 
