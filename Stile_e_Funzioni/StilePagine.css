@@ -7,11 +7,15 @@ p {
   letter-spacing: 3px;}
 
 h1,h3{
+  position: relative;
+  margin-top: 0px;
   text-align: center;
   color: white; 
   font-size: 40; 
   background-color: black;
-  letter-spacing: 3px;}
+  letter-spacing: 2px;
+
+  }
 
 h2{
   text-align: center;
@@ -20,11 +24,11 @@ h2{
   background-color: black; 
   letter-spacing: 3px;}
 
-input {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 15%;
+#input
+{
+	display: block;
+    height:200px;
+    font-size:14pt;
 }
 
 button {
@@ -42,7 +46,104 @@ img {
   margin-right: auto;
 }
 
-body{
-  background-image: url("../Immagini/background.png");
-  background-size: auto;
+.bg {
+	background-image: url(../img/bg.png);
+	top: 0;
+	left: 0;
+	background-repeat: none;
+	background-size: cover;
 }
+
+.fixed {
+	position: fixed;
+	top: 0;
+	left: 0;
+    width: auto;
+    height: 100%;
+}
+
+.tray {
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	height: 100%;
+}
+
+.img_inizia-offset {
+	position: absolute;
+	height: 30%;
+	
+}
+
+
+#div_ancoraggio{
+    overflow:auto;
+}
+body { margin:0; }
+
+.ancora_destra-input {
+  position: absolute;
+  right:0px;
+  bottom:0px;
+  height: auto;
+  width: 40%;
+  float:right;
+  float:bottom;
+}
+
+.ancora_destra-dialogo {
+  position: absolute;
+  right:0px;
+  bottom:30%;
+  height: 60%;
+  width: auto;
+  float:right;
+  float:bottom;
+}
+
+.ancora_destra-testo {
+  position: absolute;
+  right:0px;
+  top: 10%;
+  left: 50%;
+  height: 40%;
+  width: 45%;
+  float:right;
+  float:bottom;
+  border: 4px solid #000000;
+  padding: 10px;
+  background: white;
+  overflow: hidden;
+ border-radius: 25px;
+}
+
+.freccia-destra {
+  width: 0; 
+  height: 0; 
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;   
+  border-right:10px solid white; 
+}
+
+.input_iniziale {
+  position: absolute;
+  right:0px;
+  bottom:0px;
+  margin-right:15%;
+  margin-bottom:7%;
+  height: 10%;
+  width: 20%;
+  float:right;
+  float:bottom;
+}
+
+.pulsante_iniziale {
+  position: absolute;
+  right:2%;
+  bottom:15%;
+  height: 10%;
+  width: 10%;
+  float:right;
+  float:bottom;
+}
+

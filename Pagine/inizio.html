@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Somarello Escape</title>
+		<meta charset="utf-8"/>
+		<link rel="stylesheet" href="../Stile_e_Funzioni/StilePagine.css">
+
+		<script type="text/javascript">
+			function paginaSuccessiva(linkPagina){ //la pagina variera' a seconda delle scuole(medie o superiori)
+				location.href = linkPagina;
+			}
+
+			function readPassword() {
+				//serve un elemento html che raccolga la password in una stringa di testo, perché in base alla password gli utenti saranno reindirizzati nei quesiti corrispondenti al loro livello
+				var scuole =  document.getElementById("passw").value[0].toLowerCase();
+				var linkPagina = " ";
+
+				switch(scuole) {
+					case "s":
+						linkPagina = "Pagine/superiori_1.html";
+						break;
+
+					case "m":
+						linkPagina = "Pagine/medie_1.com";
+						break;
+
+					default:
+						document.getElementById("messaggio").innerHTML = "Password sbagliata! <br />Riprova!";
+						document.getElementById("passw").value = "";
+						break;
+				}
+
+				if(linkPagina != " ")
+					paginaSuccessiva(linkPagina);
+			}
+		</script>
+	</head>
+	<body class="bg">
+		<div class="tray">
+			<img class="tray" src="../img/tray.png" draggable="false">
+			<a href=".\quesito1.html"style="display:block"><img class="tray img_inizia-offset" src='../img/inizia.png' onmouseover="this.src='../img/inizia_hover.png';" onmouseout="this.src='../img/inizia.png';" style="bottom: 35%; transform: translateX(100%);"/></a>
+		</div>
+		<div class="ancora_destra-testo" style="top: 35%; left: 60%;height: 20%; width: 25%;">
+			Complimenti, .. .. ..
+		</div>
+		
+		<div id="div_ancoraggio">
+			<h1>Escape room: il Mistero di Marconi</h1>
+
+		</div>
+	</body>
+</html>

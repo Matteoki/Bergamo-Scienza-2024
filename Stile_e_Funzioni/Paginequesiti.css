@@ -1,0 +1,173 @@
+p {
+  text-align: center;
+  color: white; 
+  font-size: 32; 
+  background-color: black; 
+  line-height: 1.5; 
+  letter-spacing: 3px;}
+  
+@font-face {
+    font-family: 'font';
+    src: url('temp.woff') format('woff'), /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+         url('../font/LeipzigFrakturLfNormal.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+}  
+
+body {
+
+}
+
+h1,h3{
+  font-family: 'font', sans-serif;
+  position: relative;
+  margin-top: 0px;
+  text-align: center;
+  color: #fcfaf3; 
+  font-size: 40; 
+  background-color: #1c130c;
+  letter-spacing: 2px;
+
+  }
+
+h2{
+
+  text-align: center;
+  color: white; 
+  font-size: 24; 
+  background-color: black; 
+  letter-spacing: 3px;}
+
+#input
+{
+	display: block;
+    height:200px;
+    font-size:14pt;
+}
+
+button {
+  display: block;
+  font-size:large;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100px;
+  text-align: center;
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.bg {
+	background-image: url(../img/bg_quesiti_1.png);
+	top: 0;
+	left: 0;
+	background-repeat: none;
+	background-size: cover;
+}
+
+.fixed {
+	position: fixed;
+	top: 0;
+	left: 0;
+    width: auto;
+    height: 100%;
+}
+
+.tray {
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	height: 100%;
+}
+
+.img_inizia-offset {
+	position: absolute;
+	height: 30%;
+	
+}
+
+
+body { margin:0; }
+
+.ancorazione_input {
+   position: absolute;
+   left:37%;
+  bottom:15%;
+  height: 9%;
+  width: 19%;
+  float:right;
+  float:bottom;
+}
+
+.ancorazione_input-conferma {
+   position: absolute;
+   left:57%;
+  bottom:15%;
+  height: 10%;
+  width: 7%;
+  float:right;
+  float:bottom;
+  
+}
+
+.ancora_destra-dialogo {
+  position: absolute;
+  right:0px;
+  bottom:30%;
+  height: 60%;
+  width: auto;
+  float:right;
+  float:bottom;
+}
+
+.ancora_sinistra-testo {
+  position: absolute;
+  left:35%;
+  top: 18%;
+  height: 60%;
+  width: 28%;
+  float:left;
+  float:bottom;
+  padding: 1%;
+  overflow: auto ;
+  font-size: 100%;
+}
+.quesito_titolo{
+  text-align: center;
+  color: #842800; 
+  font-size: 32; 
+  background-color: rgba(0,0,0,0.1); 
+  line-height: 1.5; 
+  letter-spacing: 3px;
+  font-weight: bold;
+}
+.ancora_sinistra{
+	position: absolute;
+	left:33%;
+	height: 90%;
+	width: 34%;
+	top:10%;
+}
+
+.input_iniziale {
+  position: absolute;
+  right:0px;
+  bottom:0px;
+  margin-right:15%;
+  margin-bottom:7%;
+  height: 10%;
+  width: 20%;
+  float:right;
+  float:bottom;
+}
+
+.pulsante_iniziale {
+  position: absolute;
+  bottom:15%;
+  height: 10%;
+  width: 20%;
+  float:right;
+  float:bottom;
+}
+
